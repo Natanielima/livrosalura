@@ -10,13 +10,84 @@
     integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
+  
+
 </head>
 <header class="header">
-  <h1><img src="imagens/Logo-1.png" /></h1>
+  <h1 class="imagem-logo"><img src="imagens/Logo-1.png" /></h1>
+  <ul>
+  <div class="menu-principal">
+    <div class="drop-menu-programacao">
+    <li><h2 class="menu-secundario">Porgramação <i class="fa-solid fa-angle-down"></i></h2></li>
+      <ul class="aparecer-programacao">
+      <li><a href="#">Lógica</a></li>
+      <li><a href="#">Java</a></li>
+      <li><a href="#">.NET</a></li>
+      <li><a href="#">PHP</a></li>
+      <li><a href="#">Games</a></li>
+      <li><a href="#">OO</a></li>
+      <li><a href="#">Funcional</a></li>
+      <li><a href="#">Python</a></li>
+      <li><a href="#">Outros</a></li>
+      <li><a href="#">Todos</a></li>
+    </ul>
+    </div>
+    <div class="drop-menu-mobile">
+  <li><h2 class="menu-secundario">Mobile <i class="fa-solid fa-angle-down"></i></h2></li>
+    <ul class="aparecer-mobile">
+      <li><a href="#"> iOS</a></li>
+      <li><a href="#"> Android</a></li>
+      <li><a href="#"> Multiplataforma</a></li>
+      <li><a href="#"> Outros</a></li>
+      <li><a href="#"> Todos</a></li>
+    </ul>
+  </div>
+    <div class="drop-menu-front-end">
+  <li><h2 class="menu-secundario">Front-End <i class="fa-solid fa-angle-down"></i></h2></li>
+    <ul class="aparecer-front-end">
+      <li><a href="#">HTML e CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">Outros</a></li>
+      <li><a href="#">Todos</a></li>
+    </ul>
+  </div>
+  <div class="drop-menu-infraestrutura">
+  <li><h2 class="menu-secundario">Infraestrutura <i class="fa-solid fa-angle-down"></i></h2></li>
+    <ul class="aparecer-infraestrutura">
+      <li><a href="#">Web</a></li>
+      <li><a href="#">Dados</a></li>
+      <li><a href="#">Outros</a></li>
+      <li><a href="#">Todos</a></li>
+    </ul>
+  </div>
+  <div class="drop-menu-business">
+  <li><h2 class="menu-secundario">Business <i class="fa-solid fa-angle-down"></i></h2></li>
+    <ul class="aparecer-business">
+      <li><a href="#">Startup</a></li>
+      <li><a href="#">Marketing Digital</a></li>
+      <li><a href="#">Gestão</a></li>
+      <li><a href="#">Agile</a></li>
+      <li><a href="#">Outros</a></li>
+      <li><a href="#">Todos</a></li>
+    </ul>
+  </div>
+  <li><h2 class="menu-secundario">Desing & UX <i class="fa-solid fa-angle-down"></i></h2></li>
+  <a href="#"><i class="fa-solid fa-gift"></i></a>
+  <div class="caixa-pesquisar">
+  <input type="text" class="pesquisar" placeholder="Pesquise aqui!">
+  <a href="#" class="btn-pesquisa"><i class="fa-solid fa-magnifying-glass btn-pesquisa"></i></a>
+      </div>  
+<i class="fa-solid fa-right-to-bracket"></i>
+</div>
+</ul>
 </header>
 
 <body>
-  <section class="banner"></section>
+  <section class="banner">
+    <h1>Melhores livros de Programação</h1>
+    <br>
+  <h2>Encontre erm nossa estante o que precisa para seu desenvolvimento!</h2>
+  </section>
   <nav class="wrap">
     <ul class="nav">
       <li><button class="btn btn-front" href="#" id="btnFiltrarLivrosFront" value="front-end">LIVROS DE
@@ -280,6 +351,7 @@
   <script src="app/metodoFilter.js"></script>
   <script src="app/metodoSort.js"></script>
   <script src="app/metodoReduce.js"></script>
+  <script src="https://kit.fontawesome.com/8fba29b5be.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
