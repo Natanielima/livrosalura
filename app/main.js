@@ -1,15 +1,41 @@
-let livros =[]
+async function listaLivro(){
+    const conexao = await fetch ("http://localhost:3000/livros");
+    const conexaoConvertida = await conexao.json();
+    return conexaoConvertida;
+}
 
-const endpointDaAPI='https://guilhermeonrails.github.io/casadocodigo/livros.json'
+async function criaLivro (titulo, autor, preco, imagem,acessibilidade,quantidade,categoria){
+    const conexao = await fetch("http://localhost:3000/livros",{
+        method: "POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body: JSON.stringify({
+            titulo: titulo,
+            preco: preco,
+            autor: autor,
+            imagem: imagem,
+            alt: acessibilidade,
+            quantidade: quantidade,
+            categoria: categoria
+        })
 
-getBsucarLivrosDaAPI()
+    });
+    const conexaoConvertida = await conexao.json();
+    return conexaoConvertida
+}
 
+// async function buscaLivro(termoDeBusca){
+//     const conexao = await fetch(`http://localhost:3000/videos?q=${termoDeBusca}`)
+//     const conexaoConvertida = conexao.json();
 
-async function getBsucarLivrosDaAPI(){
-    const res = await fetch(endpointDaAPI)
-    livros = await res.json()
-    let livrosComDesconto = aplicarDesconto(livros);
-    exibirOsLivrosNaTela(livrosComDesconto)
+//     return conexaoConvertida;
+// }
+
+export const conectaApi={
+    listaLivro,
+    criaLivro
+    // buscaLivro
 }
 
 

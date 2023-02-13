@@ -72,12 +72,12 @@
     </ul>
   </div>
   <li><h2 class="menu-secundario">Desing & UX <i class="fa-solid fa-angle-down"></i></h2></li>
-  <a href="#"><i class="fa-solid fa-gift"></i></a>
-  <div class="caixa-pesquisar">
+  <a href="#" class="menu-secundario"><i class="fa-solid fa-gift"></i></a>
+  <div class="caixa-pesquisar menu-secundario">
   <input type="text" class="pesquisar" placeholder="Pesquise aqui!">
   <a href="#" class="btn-pesquisa"><i class="fa-solid fa-magnifying-glass btn-pesquisa"></i></a>
       </div>  
-<i class="fa-solid fa-right-to-bracket"></i>
+      <a href="/criaLivros.html" class="menu-secundario"><i class="fa-solid fa-plus"></i></a>
 </div>
 </ul>
 </header>
@@ -88,7 +88,7 @@
     <br>
   <h2>Encontre erm nossa estante o que precisa para seu desenvolvimento!</h2>
   </section>
-  <nav class="wrap">
+  <nav >
     <ul class="nav">
       <li><button class="btn btn-front" href="#" id="btnFiltrarLivrosFront" value="front-end">LIVROS DE
           FRONT-END</button>
@@ -100,7 +100,7 @@
       <li><button class="btn btn-ordenacao" href="#" id="btnOrdenarPorPreco">ORDENAR POR PREÇO</button></li>
     </ul>
   </nav>
-  <section class="livros wrap" id="livros">
+  <section class="livros" id="livros">
     <!-- <div class="livro">
       <img class="livro__imagens" src="imagens/Cangaceiro-Javascript.png" alt="Capa do livro Cangaceiro JavaScript" />
       <h2 class="livro__titulo">
@@ -345,12 +345,13 @@
   <footer class="rodape">
     <p>Alura - Mergulhe em tecnologia</p>
   </footer>
-  <script src="app/main.js"></script>
-  <script src="app/metodoForEach.js"></script>
+  <!-- <script src="app/main.js" type="module"></script> -->
+  <script src="app/exibirLivros.js" type="module"></script>
+  <!-- <script src="app/metodoForEach.js"></script>
   <script src="app/metodoMap.js"></script>
   <script src="app/metodoFilter.js"></script>
   <script src="app/metodoSort.js"></script>
-  <script src="app/metodoReduce.js"></script>
+  <script src="app/metodoReduce.js"></script> -->
   <script src="https://kit.fontawesome.com/8fba29b5be.js" crossorigin="anonymous"></script>
 </body>
 

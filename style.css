@@ -14,21 +14,16 @@ body {
   font-family: 'Poppins';
 }
 
-.wrap {
-  width: 1280px;
-  margin: 0 auto;
-}
-
 .header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
   background-color: var(--bg-color);
-  height: 4em;
+  height: 100%;
 }
 .menu-principal{
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(auto-fit, minmax(8.55em, 1fr));
   align-items: center;
   justify-items: center;
   height: 100%;
@@ -40,14 +35,7 @@ body {
   border-top-left-radius: 0.5em;
   height: 3.6em;
   align-items: center;
-}
-@media screen and (min-width: 1000px){
-.menu-principal{
-  display: grid;
-  grid-template-columns: repeat(9, auto);
-  align-items: center;
-  justify-items: center;
-}
+
 }
 .menu-secundario, .caixa-pesquisar{
   display: flex;
@@ -64,7 +52,9 @@ body {
   width: 100px;
   transition: 0.5s;
 }
+
 .pesquisar{
+  color: var(--bg-color);
   border-radius: 5em;
   width: 0;
   border: none;
@@ -119,7 +109,7 @@ body {
   color: white;
   font-weight: 500;
   align-content: center;
-  justify-items: center;
+  justify-content: center;
   text-shadow: 0 0 20px #FF0000, 0 0 20px #0000FF;
 }
 h1{
@@ -131,18 +121,19 @@ h1{
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.6em, 1fr));
   margin: 4rem 0;
+  justify-items: center;
 }
+
 
 .btn {
   background-color: var(--text-price-color);
   border: none;
   cursor: pointer;
   height: 44px;
+  width: 14em;
   text-decoration: none;
   color: #fff;
   padding: 10px 16px;
@@ -160,9 +151,10 @@ h1{
 }
 
 .livros {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.2em, 1fr));
+  margin: 0 2em 0 2em;
+  justify-items: center;
 }
 
 .livro {
@@ -254,4 +246,29 @@ h1{
   color: #fff;
   font-weight: 500;
   line-height: 24px;
+}
+
+/* formulario */
+
+.container__formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0 2em 0;
+}
+.formulario__campo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0 1em 0;
+}
+.campo__escrita{
+  border-radius: 0.5em;
+  width: 25em;
+  height: 2em;
+  text-align: center;
+}
+.campo__etiqueta{
+  margin: 0.5em 0 0.5em 0;
 }
