@@ -30,7 +30,7 @@ async function listaLivro(){
   const listaAPI = await conectaApi.listaLivro();
   exibirOsLivrosNaTela(listaAPI)
   } catch{
-      lista.innerHTML=`<h2 class="mensagem__titulo">Não foi possível carregar a lista de vídeo</h2>`
+      lista.innerHTML=`<h2 class="mensagem__titulo">Não foi possível carregar a lista de livros</h2>`
   }
 }
 

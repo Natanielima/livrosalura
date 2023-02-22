@@ -25,17 +25,18 @@ async function criaLivro (titulo, autor, preco, imagem,acessibilidade,quantidade
     return conexaoConvertida
 }
 
-// async function buscaLivro(termoDeBusca){
-//     const conexao = await fetch(`http://localhost:3000/videos?q=${termoDeBusca}`)
-//     const conexaoConvertida = conexao.json();
+async function buscaLivros(termoDeBusca){
+    const conexao = await fetch(`http://localhost:3000/livros?q=${termoDeBusca}`)
+    const conexaoConvertida = conexao.json();
 
-//     return conexaoConvertida;
-// }
+    return conexaoConvertida;
+}
+
 
 export const conectaApi={
     listaLivro,
-    criaLivro
-    // buscaLivro
+    criaLivro,
+    buscaLivros
 }
 
 
