@@ -14,13 +14,13 @@
   
 </head>
 <header class="header">
-  <h1 class="imagem-logo"><img src="imagens/Logo-1.png" /></h1>
+  <a href="index.html"><h1 class="imagem-logo"><img src="imagens/Logo-1.png" /></h1></a>
   <ul>
   <div class="menu-principal">
     <div class="drop-menu-programacao">
     <li><h2 class="menu-secundario">Porgramação <i class="fa-solid fa-angle-down"></i></h2></li>
       <ul class="aparecer-programacao">
-      <li><button class="btn btn-Lógica" id="btnFiltrarLivrosLógica" value="Lógica"><a href="#" >Lógica</a></button></li>
+      <li><button class="btn btn-Lógica" id="btnFiltrarLivrosLógica" value="Lógica"><a href="" >Lógica</a></button></li>
       <li><button class="btn btn-Java" id="btnFiltrarLivrosJava" value="Java"><a href="#"  >Java</a></button></li>
       <li><button class="btn btn-.NET" id="btnFiltrarLivros.NET" value=".NET" ><a href="#" >.NET</a></button></li>
       <li><button class="btn btn-PHP" id="btnFiltrarLivrosPHP" value="PHP" ><a href="#" >PHP</a></button></li>
@@ -122,16 +122,9 @@
              </div>
              <div class="formulario__campo">
               <label class="campo__etiqueta" for="categoria">Categoria</label>
-              <select name="imagem" class="campo__escrita" required  id='categoria' data-categoria>
-                <option>Programação</option>
-                <option value="Lógica">Lógica</option>
-                <option value="Java">Java</option>
-                <option value="NET">NET</option>
-                <option value="PHP">PHP</option>
-                <option value="Games">Games</option>
-                <option value="OO">OO</option>
-                <option value="Funcional">Funcional</option>
-                <option value="Python">Python</option>
+              <select  class="campo__escrita" required  id='categoriaTipos' data-categoria>
+              </select>
+              <select  class="campo__escrita" required  id='categoriaSubTipos' data-categoriaTipos>
               </select>
            </div>
                 <input class="formulario__botao btn" type="submit" />
