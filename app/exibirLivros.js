@@ -27,8 +27,9 @@ export default function exibirOsLivrosNaTela(listaDeLivros) {
 
 async function listaLivro(){
   try{
+
   const listaAPI = await conectaApi.listaLivro();
-  exibirOsLivrosNaTela(listaAPI)
+  exibirOsLivrosNaTela(listaAPI.livros)
   } catch{
       lista.innerHTML=`<h2 class="mensagem__titulo">Não foi possível carregar a lista de livros</h2>`
   }
