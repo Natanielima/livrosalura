@@ -18,13 +18,14 @@ const botoes = document.querySelectorAll('.btn');
 botoes.forEach(btn=> btn.addEventListener('click', filtrarLivros))
 
 async function filtrarLivros(){
-    const id = this.id
+    const id = this.id  
     if(id!="btnFiltrarLivrosTodos"){
     const elementoBtn = document.getElementById(id);
     const categoria = elementoBtn.value;
 
-    const livros= await conectaApi.listaLivro();
-    const livrosFiltrados = (categoria=='disponivel' ? livros.filter(livro => livro.quantidade > 0) :  livros.filter(livro =>livro.categoria==categoria));
+    const livrosCompletos = await conectaApi.listaLivro();
+    const livros= livrosCompletos.livros
+    const livrosFiltrados = (categoria=='disponivel' ? livros.livros.filter(livro => livro.quantidade > 0) :  livros.filter(livro =>livro.categoria==categoria));
     console.log(livrosFiltrados)
     const somaTotal = livrosFiltrados.reduce(getTotal,0);
     function getTotal(total,item){

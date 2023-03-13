@@ -28,9 +28,15 @@ async function criaLivro (titulo, autor, preco, imagem,acessibilidade,quantidade
 }
 
 async function buscaLivros(termoDeBusca){
-    const conexao = await fetch(`https://github.com/Natanielima/livrosalura/edit/master/db.json?q=${termoDeBusca}`)
-    const conexaoConvertida = conexao.json();
-    return conexaoConvertida;
+    const conexao = await fetch ("https://natanielima.github.io/casadocodigo/db.json");
+    const conexaoConvertida = await conexao.json();
+    const conexaoConvertidaFiltrada = conexaoConvertida.livros.filter((elemento)=>{
+        if (elemento.categoria===termoDeBusca || elemento.titulo.includes(termoDeBusca)) {
+            return elemento
+        }
+    })
+    return conexaoConvertidaFiltrada;
+
 }
 
 
