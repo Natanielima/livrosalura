@@ -101,7 +101,7 @@ body {
 
 
 .banner {
-  background-image: url('/imagens/971.png');
+  background-image: url('./imagens/971.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 278px;
